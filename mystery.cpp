@@ -10,7 +10,7 @@ void print(auto A)
    cout<<endl;
 }
 
-void mystery1(auto& D1)
+void mystery1(auto& Data)
 {
   cout<<endl<<"Mystery 1"<<endl<<"---------------------"<<endl;
 
@@ -20,12 +20,12 @@ void mystery1(auto& D1)
 	if ( Data[ i ] < Data[ j ] )
 	    swap( Data[ i ] , Data[ j ] );
 
-    print(D1);
+    print(Data);
   }//end outer for (this brace is needed to include the print statement)
 
 }
 
-void mystery2(auto& D2)
+void mystery2(auto& Data)
 {
 	cout<<endl<<"Mystery 2"<<endl<<"---------------------"<<endl;
 
@@ -35,12 +35,12 @@ void mystery2(auto& D2)
 			if ( Data [ j+1] < Data [ j ] )
 			swap ( Data [ j +1] , Data [ j ] ) ;
 
-	print(D2);
+	print(Data);
 	}
 }
 
 
-void mystery3(auto& D3)
+void mystery3(auto& Data)
 {
 	cout<<endl<<"Mystery 3"<<endl<<"---------------------"<<endl;
 
@@ -49,7 +49,7 @@ void mystery3(auto& D3)
 		for ( int j = i ; j < Data.size() ; j++)
 			if ( Data [ j ] < Data [ i ] )
 			swap ( Data [ i ] , Data [ j ] ) ;
-		print(D3);
+		print(Data);
 	}
 }
 
