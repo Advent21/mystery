@@ -10,22 +10,49 @@ void print(auto A)
    cout<<endl;
 }
 
-void mystery1(auto& D)
+void mystery1(auto& D1)
 {
   cout<<endl<<"Mystery 1"<<endl<<"---------------------"<<endl;
 
-  for ( int i = 0 ; i < Data.size( ) ; i++)
+  for ( int i = 0 ; i < Data.size() ; i++)
   {
     for ( int j = 0 ; j < i ; j++)
 	if ( Data[ i ] < Data[ j ] )
 	    swap( Data[ i ] , Data[ j ] );
 
-    print(D);
+    print(D1);
   }//end outer for (this brace is needed to include the print statement)
 
 }
 
-//... Other mysteries...
+void mystery2(auto& D2)
+{
+	cout<<endl<<"Mystery 2"<<endl<<"---------------------"<<endl;
+
+	for ( int i = 0 ; i < Data.size() ; i++)
+	{
+		for ( int j = 0 ; j < Data.size() −1 ; j++)
+			if ( Data [ j+1] < Data [ j ] )
+			swap ( Data [ j +1] , Data [ j ] ) ;
+
+	print(D2);
+	}
+}
+
+
+void mystery3(auto& D3)
+{
+	cout<<endl<<"Mystery 3"<<endl<<"---------------------"<<endl;
+
+	for ( int i = 0 ; i < Data.size() ; i++)
+	{
+		for ( int j = i ; j < Data.size() ; j++)
+			if ( Data [ j ] < Data [ i ] )
+			swap ( Data [ i ] , Data [ j ] ) ;
+		print(D3);
+	}
+}
+
 
 int main()
 {
